@@ -12,12 +12,15 @@ Pet adoption SPA is an interactive website that allows users to search through a
 
 **So that** I can view a collection of  “cards” containing available animals with basic pet information including: name, picture and color
 
+---
+
 **As a** User
 
 **I want to** Filter my search results by “dog” or “cat” of animal that I am interested in adopting
 
 **So that** I can filter our potential adoptees that are irrelevant to my search.
 
+![Alt text](./assets/wireframe/Home.png)
 ---
 
 **As a** User
@@ -26,6 +29,7 @@ Pet adoption SPA is an interactive website that allows users to search through a
 
 **So that** I can find a pet that is aesthetically pleasing to my eye
 
+![Alt text](./assets/wireframe/Selection_example.png)
 ---
 
 **As a** User
@@ -34,6 +38,7 @@ Pet adoption SPA is an interactive website that allows users to search through a
 
 **So that** I can learn more information about the dog or cat, including: name, picture, color,  breed, size, and location
 
+![Alt text](./assets/wireframe/Selection.png)
 ---
 
 **As a** User
@@ -42,4 +47,5 @@ Pet adoption SPA is an interactive website that allows users to search through a
 
 **So that** I can restart my search if I’m not finding what I’m looking for or change my mind on my preferences
 
+![Alt text](./assets/wireframe/Results.png)
 
