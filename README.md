@@ -50,4 +50,19 @@ Pet adoption SPA is an interactive website that allows users to search through a
 ![Alt text](./assets/wireframe/Results.png)
 
 
-To start, run json-server --watch db.json 
+To start, run 
+``` 
+json-server --watch db.json 
+```
+
+### Searching with dropdown:
+- [ ] species
+- [ ] age
+- [ ] gender
+- [ ] size
+
+### TODO:
+- [ ] Task 1
+- [ ] Task 2
+- [ ] Task 3
+- [ ] Task 4
