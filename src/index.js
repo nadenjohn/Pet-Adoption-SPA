@@ -29,67 +29,33 @@ function updateAnimals(animals) {
 
     cardContainer = document.getElementById("animal-card");
 
-
-    console.log("saderfgsdfhs")
-  
-    
-
-    searchProperties = animals.filter((e) => {
+    searchedProperties = animals.filter((e) => {
       //console.log(e.species)
-      if (speciesOption !== "" && e.species === speciesOption) {
-        console.log(e.species, speciesOption)
+      if (speciesOption !== "" && e.species !== speciesOption) {
+        // console.log(e.species, speciesOption);
         return false;
       }
-      if (ageOption !== "" && e.age === ageOption) {
-        console.log(ageOption, ageOption)
+      if (ageOption !== "" && e.age !== ageOption) {
+        // console.log(ageOption, ageOption);
         return false;
       }
-      if (genderOption !== "" && e.gender === genderOption) {
-        console.log(e.gender, genderOption)
+      if (genderOption !== "" && e.gender !== genderOption) {
+        // console.log(e.gender, genderOption);
         return false;
       }
-      if (sizeOption !== "" && e.size === sizeOption) {
-        console.log(e.size, sizeOption)
+      if (sizeOption !== "" && e.size !== sizeOption) {
+        // console.log(e.size, sizeOption);
         return false;
       }
+      return true;
+    });
 
-    })
-
-
+    searchedProperties.forEach(addAnimals);
 
     return false;
-
   };
-  
-  animals.forEach(addAnimals);
+  // animals.forEach(addAnimals);
 }
-
-// // Search
-// function addAnimalSelector(animals) {
-
-//   let speciesOption = document.getElementById("species-dropdown");
-//   let ageOption = document.getElementById("age-dropdown");
-//   let genderOption = document.getElementById("gender-dropdown");
-//   let sizeOption = document.getElementById("size-dropdown");
-//   // let searchForm = document.getElementById("search-form");
-//   // let species = "";
-
-//   speciesOption.addEventListener("change", (e) => {
-//     console.log(e.target.value);
-//     species = e.target.value;
-//   });
-//   ageOption.addEventListener("change", (e) => {
-//     console.log(e.target.value);
-//   });
-//   genderOption.addEventListener("change", (e) => {
-//     console.log(e.target.value);
-//   });
-//   sizeOption.addEventListener("change", (e) => {
-//     console.log(e.target.value);
-//   });
-
-//   // console.log(species);
-// }
 
 function addAnimals(animal) {
   // TODO:
