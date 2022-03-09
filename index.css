@@ -3,8 +3,14 @@
   width: 50%;
   border: 1px solid #333;
   padding: 10px;
-  text-align:center;
+  text-align: center;
 }
 
+#animals-results {
+  border: 1px solid #333;
+}
 
-
+.animal-item {
+  border: 1px solid #333;
+  padding: 10px;
+}
