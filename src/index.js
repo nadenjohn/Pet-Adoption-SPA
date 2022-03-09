@@ -34,6 +34,7 @@ function updateAnimals(animal) {
     animalPhoto.alt = animal.name;
   } else {
     animalPhoto.src = "./assets/placeholder.gif";
+    animalPhoto.alt = animal.name;
   }
 
   let animalColors = document.createElement("p"); // list

@@ -5,9 +5,11 @@
 - [x] Create dropdown menu in html
 - [x] Create form/buttons in html
 - [ ] Hook up the search options to db
+- [x] Add image to result card
+- [ ] Add Description to cards
 - [ ] Add Event listener to Submit
 - [ ] Add Event listener to Reset
-- [ ] Make the Results work
+- [ ] Make the Results filter/update work
 - [ ] Add placeholder image for animals with no photos
 - [ ] Add styles with index.css
 
