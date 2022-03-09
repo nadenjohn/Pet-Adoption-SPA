@@ -1,5 +1,15 @@
 # Pet-Adoption-SPA
 
+
+### TODO:
+- [x] Create dropdown menu in html
+- [x] Create form/buttons in html
+- [ ] Hook up the search options to db
+- [ ] Add Event listener to Submit
+- [ ] Add Event listener to Reset
+- [ ] Make the Results work
+- [ ] Add placeholder image for animals with no photos
+
 ### Pitch
 
 Pet adoption SPA is an interactive website that allows users to search through adoptable cats and dogs using information from the AdoptAPet API.
@@ -53,14 +63,5 @@ To start, run
 json-server --watch db.json 
 ```
 
-### Searching with dropdown:
-- [ ] species
-- [ ] age
-- [ ] gender
-- [ ] size
 
-### TODO:
-- [ ] Task 1
-- [ ] Task 2
-- [ ] Task 3
-- [ ] Task 4
+
