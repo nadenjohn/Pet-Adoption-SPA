@@ -6,12 +6,14 @@
 - [x] Create form/buttons in html
 - [x] Hook up the search options to db
 - [x] Add image to result card
-- [ ] Add Description to cards
+- [x] Add Description to cards
+  - [ ] Add More description to cards
 - [x] Add Event listener to Submit
-- [ ] Add Event listener to Reset
+- [x] Add Event listener to Reset (I think it is working)
 - [x] Make the Results filter/update work
 - [x] Add placeholder image for animals with no photos
 - [ ] Add styles with index.css
+- [ ] Create no result prompt when there is no result from the search
 
 
 #### Grid and card hierchy
