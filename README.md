@@ -9,6 +9,7 @@
 - [ ] Add Event listener to Reset
 - [ ] Make the Results work
 - [ ] Add placeholder image for animals with no photos
+- [ ] Add styles with index.css
 
 ### Pitch
 
