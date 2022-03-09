@@ -10,17 +10,8 @@ function renderAnimals(animals) {
 }
 
 function renderAnimal(animal) {
-  console.log(animal)
+  console.log(animal);
   //console.log(animal.name);
   //console.log(animal.colors.primary)
 }
-
-// Searchable 
-// {
-//   "species": "Cat",
-//   "age": "Baby",
-//   "gender": "Female",
-//   "size": "Large",
-// }
-
 

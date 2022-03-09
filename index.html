@@ -7,21 +7,53 @@
   </head>
 
   <body>
-
-
-    <h1>PetSeek</h2>
-    <div class="container">
-
-      <select id="type-dropdown" name="select-type">
-        <option value="">none</option>
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-      </select>
-
-
+    <h1>PetSeek</h1>
+    <div class="search-container">
+      <h3>Search</h3>
+      <form id="search-form" action="">
+        <hr />
+        <label for="select-species">Species</label>
+        <select id="species-dropdown" name="select-species">
+          <option value="">none</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+        </select>
+        <br /><br />
+        <label for="select-age">Age</label>
+        <select id="age-dropdown" name="select-age">
+          <option value="">none</option>
+          <option value="Senior">Senior</option>
+          <option value="Adult">Adult</option>
+          <option value="Young">Young</option>
+          <option value="Baby">Baby</option>
+        </select>
+        <br /><br />
+        <label for="select-gender">Gender</label>
+        <select id="gender-dropdown" name="select-gender">
+          <option value="">none</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <br /><br />
+        <label for="select-size">Size</label>
+        <select id="size-dropdown" name="select-size">
+          <option value="">none</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="Extra Large">Extra Large</option>
+        </select>
+        <br /><br />
+        <button id="submit">Submit</button>
+        <button id='reset'>Reset</button>
+      </form>
     </div>
 
+    <!-- We can use <div> instead of <ul> -->
+    <ul id="animals-results">
+      <!-- Results goes here-->
+    </ul>
 
-    <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript" src="src/index.js" charset="utf-8"></script>
   </body>
 </html>
