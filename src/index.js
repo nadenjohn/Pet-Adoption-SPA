@@ -19,17 +19,14 @@ function loadAnimals(animals) {
 }
 
 function updateAnimals(animal) {
-  // console.log(animal);
-  // console.log(animal.colors.primary);
-
-  /////////////////////////////////////////////////////////////////////////////////////////////////
   let animalGrid = document.getElementById("animals-results");
   let animalCard = document.createElement("div");
   animalCard.className = "animal-card";
-  /////////////////////////////////////////////////////////////////////////////////////////////////
-  let animalName = document.createElement("h3");
-  /////////////////////////////////////////////////////////////////////////////////////////////////
-  let animalPhoto = document.createElement("img"); // list
+
+  let animalCardContent = document.createElement("div")
+  animalCardContent.className = "animal-card-content";
+
+  let animalPhoto = document.createElement("img");
   animalPhoto.className = "animal-card-photo";
   if (animal.photos.length > 0) {
     animalPhoto.src = animal.photos[0].medium;
@@ -38,38 +35,36 @@ function updateAnimals(animal) {
     animalPhoto.src = "./assets/placeholder.gif";
     animalPhoto.alt = animal.name;
   }
-  /////////////////////////////////////////////////////////////////////////////////////////////////
+
+  let animalName = document.createElement("h2");
+  animalName.textContent = animal.name;
+
   let animalPrimaryColor = document.createElement("p");
   if (animal.colors.primary === undefined || animal.colors.primary === null) {
-    animalPrimaryColor.textContent = "Primary color: None given";
-    animalPrimaryColor.className = "description";
-    console.log(animalPrimaryColor);
+    animalPrimaryColor.textContent = "";
   } else {
-    animalPrimaryColor.textContent = `Primary color: ${animal.colors.primary}`;
-    animalPrimaryColor.className = "description";
-    console.log(animalPrimaryColor);
+    animalPrimaryColor.textContent = `Color: ${animal.colors.primary}`;
   }
-  /////////////////////////////////////////////////////////////////////////////////////////////////
+
   let animalAge = document.createElement("p");
-  animalAge.textContent = animal.age;
-  animalAge.className = "description";
-  /////////////////////////////////////////////////////////////////////////////////////////////////
+  animalAge.textContent = `Age: ${animal.age}`;
 
-  // let animalOrganization = document.createElement("p"); // organization_animal_id
 
-  // let animalContact = document.createElement("p"); // list
+  let animalGender = document.createElement('p');
+  animalGender.textContent = `Gender: ${animal.gender}`;
 
-  // let animalGender = document.createElement('p');
-
-  // let animalSize = document.createElement('p');
+  let animalSize = document.createElement('p');
+  animalSize.textContent = `Size: ${animal.size}`;
 
   // let animalCoat = document.createElement('p');
-
   // let animalAttribute = document.createElement('p'); // might have to be a list
-
   // let animalPrimaryBreed = document.createElement('p'); // animal.breeds.primary
+  // let animalOrganization = document.createElement("p"); // organization_animal_id
+  // let animalContact = document.createElement("p"); // list
 
-  animalName.textContent = animal.name;
-  animalCard.append(animalName, animalPhoto, animalPrimaryColor, animalAge);
+  animalCardContent.append(animalName, animalAge, animalGender, animalSize, animalPrimaryColor);
+  animalCard.append(animalPhoto, animalCardContent);
+
   animalGrid.append(animalCard);
 }
+

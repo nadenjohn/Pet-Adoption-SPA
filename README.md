@@ -19,9 +19,9 @@
 - animalGrid / animals-results
   - animalCard / animal-card
     - animalPhoto / animal-card-photo
-    - animalContent / animal-card-content
+    - animalCardContent / animal-card-content
       - animalName 
-      - animalPrimaryColor
+      - animalPrimaryColor 
       - animalAge
       - ... 
 
