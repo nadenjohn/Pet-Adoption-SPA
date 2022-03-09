@@ -1,4 +1,5 @@
 const petFinderAPI = "http://localhost:3000/animals";
+let animalGrid = document.getElementById("animals-results");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -22,6 +23,10 @@ function updateAnimals(animals) {
     let ageOption = document.getElementById("age-dropdown").value;
     let genderOption = document.getElementById("gender-dropdown").value;
     let sizeOption = document.getElementById("size-dropdown").value;
+
+    while (animalGrid.firstChild) {
+      animalGrid.removeChild(animalGrid.firstChild);
+    }
 
     searchedProperties = animals.filter((e) => {
       if (speciesOption !== "" && e.species !== speciesOption) {
@@ -48,7 +53,7 @@ function addAnimals(animal) {
   // TODO:
   // Add button to redirect to animal petfinder page
 
-  let animalGrid = document.getElementById("animals-results");
+  // let animalGrid = document.getElementById("animals-results");
   let animalCard = document.createElement("div");
   animalCard.className = "animal-card";
 
