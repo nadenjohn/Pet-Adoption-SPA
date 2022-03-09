@@ -45,7 +45,7 @@ Pet adoption SPA is an interactive website that allows users to search through a
 
 **So that** I can restart my search if I’m not finding what I’m looking for or change my mind on my preferences
 
-![Alt text](./assets/wireframe/Results0.png)
+![Alt text](./assets/wireframe/Results.png)
 
 
 To start, run 
