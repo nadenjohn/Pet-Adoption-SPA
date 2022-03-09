@@ -4,26 +4,38 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
   // Functions here
-  getAnimals();
+  loadAnimals();
 }
 
-function getAnimals() {
+
+function loadAnimals() {
+  let speciesDropdown = document.getElementById("species-dropdown").value;
   fetch(petFinderAPI)
     .then((res) => res.json())
-    .then(loadAnimals)
+    .then((json) => {
+      updateAnimals(json);
+      //addAnimalSelectListener();
+    })
     .catch(console.err);
 }
 
-function loadAnimals(animals) {
-  animals.forEach(updateAnimals);
+// console.log("asdasdasdasdasfasdgf")
+
+function updateAnimals(animals) {
+  let results = document.querySelector("#animals-results");
+  results.innerHTML = "";
+  animals.forEach(addAnimals);
 }
 
-function updateAnimals(animal) {
+function addAnimals(animal) {
+  // TODO:
+  // Add button to redirect to animal petfinder page
+
   let animalGrid = document.getElementById("animals-results");
   let animalCard = document.createElement("div");
   animalCard.className = "animal-card";
 
-  let animalCardContent = document.createElement("div")
+  let animalCardContent = document.createElement("div");
   animalCardContent.className = "animal-card-content";
 
   let animalPhoto = document.createElement("img");
@@ -49,11 +61,10 @@ function updateAnimals(animal) {
   let animalAge = document.createElement("p");
   animalAge.textContent = `Age: ${animal.age}`;
 
-
-  let animalGender = document.createElement('p');
+  let animalGender = document.createElement("p");
   animalGender.textContent = `Gender: ${animal.gender}`;
 
-  let animalSize = document.createElement('p');
+  let animalSize = document.createElement("p");
   animalSize.textContent = `Size: ${animal.size}`;
 
   // let animalCoat = document.createElement('p');
@@ -62,9 +73,15 @@ function updateAnimals(animal) {
   // let animalOrganization = document.createElement("p"); // organization_animal_id
   // let animalContact = document.createElement("p"); // list
 
-  animalCardContent.append(animalName, animalAge, animalGender, animalSize, animalPrimaryColor);
+  animalCardContent.append(
+    animalName,
+    animalAge,
+    animalGender,
+    animalSize,
+    animalPrimaryColor
+  );
   animalCard.append(animalPhoto, animalCardContent);
-
   animalGrid.append(animalCard);
 }
+
 
