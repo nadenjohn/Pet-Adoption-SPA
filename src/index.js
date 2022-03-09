@@ -7,25 +7,89 @@ function init() {
   loadAnimals();
 }
 
-
 function loadAnimals() {
-  let speciesDropdown = document.getElementById("species-dropdown").value;
   fetch(petFinderAPI)
     .then((res) => res.json())
     .then((json) => {
       updateAnimals(json);
-      //addAnimalSelectListener();
     })
     .catch(console.err);
 }
 
-// console.log("asdasdasdasdasfasdgf")
-
 function updateAnimals(animals) {
-  let results = document.querySelector("#animals-results");
-  results.innerHTML = "";
+  // let results = document.querySelector("#animals-results");
+  // results.innerHTML = "";
+
+  // Search
+  document.getElementById("submit").onclick = function getSelectValue() {
+    let speciesOption = document.getElementById("species-dropdown").value;
+    let ageOption = document.getElementById("age-dropdown").value;
+    let genderOption = document.getElementById("gender-dropdown").value;
+    let sizeOption = document.getElementById("size-dropdown").value;
+
+    cardContainer = document.getElementById("animal-card");
+
+
+    console.log("saderfgsdfhs")
+  
+    
+
+    searchProperties = animals.filter((e) => {
+      //console.log(e.species)
+      if (speciesOption !== "" && e.species === speciesOption) {
+        console.log(e.species, speciesOption)
+        return false;
+      }
+      if (ageOption !== "" && e.age === ageOption) {
+        console.log(ageOption, ageOption)
+        return false;
+      }
+      if (genderOption !== "" && e.gender === genderOption) {
+        console.log(e.gender, genderOption)
+        return false;
+      }
+      if (sizeOption !== "" && e.size === sizeOption) {
+        console.log(e.size, sizeOption)
+        return false;
+      }
+
+    })
+
+
+
+    return false;
+
+  };
+  
   animals.forEach(addAnimals);
 }
+
+// // Search
+// function addAnimalSelector(animals) {
+
+//   let speciesOption = document.getElementById("species-dropdown");
+//   let ageOption = document.getElementById("age-dropdown");
+//   let genderOption = document.getElementById("gender-dropdown");
+//   let sizeOption = document.getElementById("size-dropdown");
+//   // let searchForm = document.getElementById("search-form");
+//   // let species = "";
+
+//   speciesOption.addEventListener("change", (e) => {
+//     console.log(e.target.value);
+//     species = e.target.value;
+//   });
+//   ageOption.addEventListener("change", (e) => {
+//     console.log(e.target.value);
+//   });
+//   genderOption.addEventListener("change", (e) => {
+//     console.log(e.target.value);
+//   });
+//   sizeOption.addEventListener("change", (e) => {
+//     console.log(e.target.value);
+//   });
+
+//   // console.log(species);
+// }
 
 function addAnimals(animal) {
   // TODO:
@@ -83,5 +147,3 @@ function addAnimals(animal) {
   animalCard.append(animalPhoto, animalCardContent);
   animalGrid.append(animalCard);
 }
-
-
