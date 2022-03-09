@@ -18,7 +18,6 @@ function renderAnimal(animal) {
 // Searchable 
 // {
 //   "species": "Cat",
-//   "type": "Cat",
 //   "age": "Baby",
 //   "gender": "Female",
 //   "size": "Large",
