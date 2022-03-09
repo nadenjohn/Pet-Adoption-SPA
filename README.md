@@ -12,7 +12,7 @@
 
 ### Pitch
 
-Pet adoption SPA is an interactive website that allows users to search through adoptable cats and dogs using information from the AdoptAPet API.
+Pet adoption SPA is an interactive website that allows users to search through adoptable cats and dogs using information from the PetFinder API.
 
 ---
 
