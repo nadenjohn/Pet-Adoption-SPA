@@ -13,6 +13,20 @@
 - [ ] Add placeholder image for animals with no photos
 - [ ] Add styles with index.css
 
+
+#### Grid and card hierchy
+##### (javascript DOM / css class name): 
+- animalGrid / animals-results
+  - animalCard / animal-card
+    - animalPhoto / animal-card-photo
+    - animalContent / animal-card-content
+      - animalName 
+      - animalPrimaryColor
+      - animalAge
+      - ... 
+
+
+
 ### Pitch
 
 Pet adoption SPA is an interactive website that allows users to search through adoptable cats and dogs using information from the PetFinder API.

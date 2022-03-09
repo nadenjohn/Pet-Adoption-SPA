@@ -20,54 +20,56 @@ function loadAnimals(animals) {
 
 function updateAnimals(animal) {
   // console.log(animal);
-  console.log(animal.photos.length);
+  // console.log(animal.colors.primary);
 
-  let ul = document.getElementById("animals-results");
-  let animalItem = document.createElement("li");
-  animalItem.className = "animal-item";
-
+  /////////////////////////////////////////////////////////////////////////////////////////////////
+  let animalGrid = document.getElementById("animals-results");
+  let animalCard = document.createElement("div");
+  animalCard.className = "animal-card";
+  /////////////////////////////////////////////////////////////////////////////////////////////////
   let animalName = document.createElement("h3");
-
+  /////////////////////////////////////////////////////////////////////////////////////////////////
   let animalPhoto = document.createElement("img"); // list
+  animalPhoto.className = "animal-card-photo";
   if (animal.photos.length > 0) {
-    animalPhoto.src = animal.photos[0].small;
+    animalPhoto.src = animal.photos[0].medium;
     animalPhoto.alt = animal.name;
   } else {
     animalPhoto.src = "./assets/placeholder.gif";
     animalPhoto.alt = animal.name;
   }
-
-  let animalColors = document.createElement("p"); // list
-
+  /////////////////////////////////////////////////////////////////////////////////////////////////
+  let animalPrimaryColor = document.createElement("p");
+  if (animal.colors.primary === undefined || animal.colors.primary === null) {
+    animalPrimaryColor.textContent = "Primary color: None given";
+    animalPrimaryColor.className = "description";
+    console.log(animalPrimaryColor);
+  } else {
+    animalPrimaryColor.textContent = `Primary color: ${animal.colors.primary}`;
+    animalPrimaryColor.className = "description";
+    console.log(animalPrimaryColor);
+  }
+  /////////////////////////////////////////////////////////////////////////////////////////////////
   let animalAge = document.createElement("p");
+  animalAge.textContent = animal.age;
+  animalAge.className = "description";
+  /////////////////////////////////////////////////////////////////////////////////////////////////
 
-  let animalOrganization = document.createElement("p"); // organization_animal_id
-  
-  let animalContact = document.createElement("p"); // list
+  // let animalOrganization = document.createElement("p"); // organization_animal_id
 
-  let animalGender = document.createElement('p');
+  // let animalContact = document.createElement("p"); // list
 
-  let animalSize = document.createElement('p');
+  // let animalGender = document.createElement('p');
 
-  let animalCoat = document.createElement('p');
+  // let animalSize = document.createElement('p');
 
-  let animalAttribute = document.createElement('p'); // might have to be a list
+  // let animalCoat = document.createElement('p');
 
-  let animalPrimaryBreed = document.createElement('p'); // animal.breeds.primary
-  
-  
-  
+  // let animalAttribute = document.createElement('p'); // might have to be a list
+
+  // let animalPrimaryBreed = document.createElement('p'); // animal.breeds.primary
 
   animalName.textContent = animal.name;
-  animalItem.append(animalName, animalPhoto);
-  ul.append(animalItem);
-
-
-
-
-
-
-
-
-
+  animalCard.append(animalName, animalPhoto, animalPrimaryColor, animalAge);
+  animalGrid.append(animalCard);
 }
