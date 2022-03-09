@@ -68,3 +68,4 @@ function updateAnimals(animal) {
   animalGrid.append(animalCard);
 }
 
+console.log("testing")
